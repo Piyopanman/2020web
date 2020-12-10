@@ -12,6 +12,7 @@ myButton1.onclick = () => {
 }
 
 gazou.onclick = () => {
+    console.log("hoge");
     let mySrc = gazou.getAttribute('src');
     if(mySrc === 'images/firefox-icon.png'){
         gazou.setAttribute('src', 'images/firefox2.png');
