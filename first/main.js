@@ -11,3 +11,11 @@ myButton1.onclick = () => {
     }
 }
 
+gazou.onclick = () => {
+    let mySrc = gazou.getAttribute('src');
+    if(mySrc === 'images/firefox-icon.png'){
+        gazou.setAttribute('src', 'images/firefox2.png');
+    }else{
+        gazou.setAttribute('src', 'images/firefox-icon.png');
+    }
+}
