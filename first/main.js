@@ -1,15 +1,4 @@
-let myHeading = document.querySelector('h1');
 let gazou = document.querySelector('img');
-const myButton1 = document.getElementById('midasi');
-
-myButton1.onclick = () => {
-    //alert("ボタンがクリックされました")
-    if(myHeading.textContent === "webテクノロジーB 最初のサンプル！"){
-        myHeading.textContent = "g19911 Kakizaki Hinano";
-    }else{
-        myHeading.textContent = "webテクノロジーB 最初のサンプル！";
-    }
-}
 
 gazou.onclick = () => {
     console.log("hoge");
@@ -19,4 +8,19 @@ gazou.onclick = () => {
     }else{
         gazou.setAttribute('src', 'images/firefox-icon.png');
     }
+}
+
+
+let myHeading = document.querySelector('h1');
+let myButton = document.querySelector('button');
+
+function setUserName() {
+  let myName = prompt('あなたの名前を入力してください。');
+  localStorage.setItem('name', myName);
+  myHeading.textContent = 'Mozilla はすばらしいよ、' + myName;
+
+}
+
+myButton.onclick = function() {
+  setUserName();
 }
